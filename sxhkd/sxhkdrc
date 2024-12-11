@@ -8,9 +8,9 @@ alt + Return
 
 # program launcher
 super + d
-	dmenu_run
+	rofi -show drun
 
-# make sxhkd reload its configuration files:
+# reloads
 alt + Escape
 	pkill -USR1 -x sxhkd
 

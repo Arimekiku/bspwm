@@ -1,4 +1,6 @@
 #! /bin/sh
+pgrep -x sxhkd > /dev/null || sxhkd &
+
 bspc monitor -d I II III
 
 bspc config border_width         2
@@ -12,8 +14,7 @@ bspc config gapless_monocle      true
 setxkbmap -option grp:alt_shift_toggle ua,us &
 
 # Auto Start
-sxhkd -c $HOME/.config/bspwm/sxhkd/sxhkdrc &
-picom --config $HOME/.config/bspwm/picom/picom.conf &
-dunst -config $HOME/.config/bspwm/dunst/dunstrc &
-polybar --config=$HOME/.config/bspwm/polybar/config.ini &
+picom &
+dunst &
+polybar &
 nitrogen --restore 

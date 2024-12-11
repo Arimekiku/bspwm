@@ -1,0 +1,23 @@
+configuration {
+  modes: "window,drun,run";
+  lines: 5;
+  font: "Monaspace Nerd Font 14";
+  terminal: "kitty";
+  show-icons: true;
+  icon-theme: "Papirus";
+  disable-history: false;
+  drun-display-format: "{icon} {name}";
+  display-drun: " Apps";
+  display-run: " Make";
+  display-window: " Window";
+  sidebar-mode: true;
+
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
